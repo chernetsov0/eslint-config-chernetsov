@@ -1,0 +1,40 @@
+{
+  "name": "eslint-config-chernetsov",
+  "version": "0.0.1",
+  "description": "Personal extensions to Airbnb's ESLint config",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "javascript"
+  ],
+  "homepage": "https://github.com/chernetsov0/eslint-config-chernetsov#readme",
+  "bugs": "https://github.com/chernetsov0/eslint-config-chernetsov/issues",
+  "license": "BSD-3-Clause",
+  "author": "Alexey Chernetsov <chernetsov0@gmail.com> (https://chernetsov.net)",
+  "main": "index.js",
+  "repository": "github:chernetsov0/eslint-config-chernetsov",
+  "scripts": {
+    "lint": "eslint .",
+    "prepublish": "(in-publish && npm run lint --silent && safe-publish-latest) || not-in-publish"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.0",
+    "eslint-config-airbnb-base": "^11.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "in-publish": "^2.0.0",
+    "safe-publish-latest": "^1.1.1"
+  },
+  "peerDependencies": {
+    "eslint": "^3.12.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-promise": "^3.4.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base",
+      "./index.js"
+    ]
+  }
+}

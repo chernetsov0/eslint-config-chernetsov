@@ -1,0 +1,52 @@
+module.exports = {
+  parserOptions: {
+    ecmaVersion: 8,
+    ecmaFeatures: {
+      experimentalObjectRestSpread: true,
+    },
+  },
+  rules: {
+    'capitalized-comments': ['error', 'always', { ignoreConsecutiveComments: true }],
+    'func-names': ['warn', 'as-needed'],
+    'max-len': ['warn', 100, 4, {
+      ignoreComments: false,
+      ignoreTrailingComments: false,
+      ignoreUrls: false,
+      ignoreStrings: false,
+      ignoreTemplateLiterals: false,
+      ignoreRegExpLiterals: false,
+    }],
+    'no-await-in-loop': 'error',
+    'no-param-reassign': ['error', { props: false }],
+    'no-return-await': 'error',
+    'no-unused-expressions': ['error', {
+      allowTernary: true,
+      allowShortCircuit: true,
+    }],
+    'require-await': 'warn',
+    'import/no-extraneous-dependencies': ['error', { devDependencies: ['!/**/src/**/*'] }],
+    'import/order': ['error', {
+      groups: [
+        'builtin',
+        'external',
+        'internal',
+        'parent',
+        'sibling',
+        'index',
+      ],
+      'newlines-between': 'ignore',
+    }],
+    'promise/always-return': 'error',
+    'promise/avoid-new': 'off',
+    'promise/catch-or-return': 'error',
+    'promise/no-return-wrap': 'error',
+    'promise/no-native': 'off',
+    'promise/no-nesting': 'warn',
+    'promise/no-promise-in-callback': 'warn',
+    'promise/no-callback-in-promise': 'warn',
+    'promise/param-names': 'error',
+    'promise/prefer-await-to-then': 'warn',
+    'promise/prefer-await-to-callbacks': 'warn',
+  },
+  plugins: ['import', 'promise'],
+};
